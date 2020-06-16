@@ -1,16 +1,15 @@
-# dir to latest cocos_m:
 
-path_to_cocos_m=/storage/cocos_m
-
-# example of command in biolync:
-
-path_to_vep=/storage/software/ensembl-tools-release-80
+# Example of command in biolync:
+1. directory to latest cocos_m:
+   - path_to_cocos_m=/storage/cocos_m
+2. directory to vep:
+   - path_to_vep=/storage/software/ensembl-tools-release-80
 
 ${path_to_vep}/scripts/variant_effect_predictor/variant_effect_predictor.pl  -i test.vcf --cache --dir_cache ${path_to_vep}/cache --offline --force_overwrite --dir_plugins path_to_cocos_m --plugin cocos_m -o test.out --stats_text
 
-**when using vep version 80, there is a 'negative count' warning. It won't affect the function. This warning hasbeen further removed since version 87.**
+**when using vep version 80, there is a 'negative count' warning. It won't affect the function. This warning has been further removed since version 87.**
 
-# additional output:
+# Additional output:
 
 **IMPACT : impact of variant** 
 - high severity if there is a PTC predicted with canonical rules    
